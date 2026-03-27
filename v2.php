@@ -1431,22 +1431,23 @@ include 'header.php';
     </div>
 </section>
 
-<section id="galeria_videos" class="bg_orange bar-right">
-	<div class="skew-left-3 relative">
-		<!-- Animated White X Cursor follower -->
-		<div id="gv-x-follower" class="absolute pointer-events-none z-0 opacity-20 transition-transform duration-100 ease-out" style="width:500px; height:500px; left:50%; top:50%; margin-left:-250px; margin-top:-250px;">
-			<img src="assets/images/x-laranja.png" style="width:100%; height:100%; filter: brightness(0) invert(1);" alt="">
-		</div>
-		<div class="container">
-			<div class="row mb-5">
-				<div class="col-md-12">
-					<div class="bg-title-white mb-5">
-						<h4 class="font-weight-bold c_orange">Galeria</h4>
-						de videos
-					</div>
+<section id="galeria_videos" class="bg-primary relative overflow-hidden py-24">
+	<!-- Animated White X Cursor follower -->
+	<div id="gv-x-follower" class="absolute pointer-events-none z-0 opacity-20 transition-transform duration-100 ease-out" style="width:500px; height:500px; left:50%; top:50%; margin-left:-250px; margin-top:-250px;">
+		<img src="assets/images/x-laranja.png" style="width:100%; height:100%; filter: brightness(0) invert(1);" alt="">
+	</div>
+	<div class="container mx-auto px-6 relative z-10">
+		<div class="flex flex-col items-center justify-center mb-16" data-aos="fade-down">
+			<div class="relative flex flex-col items-center z-10 w-full max-w-sm">
+				<div class="bg-secondary text-white px-10 py-3 font-black tracking-widest text-lg uppercase skew-x-[-10deg] shadow-lg z-20">
+					<span class="inline-block skew-x-[10deg]">GALERIA</span>
+				</div>
+				<div class="bg-white text-primary px-8 py-3 font-black tracking-widest text-sm uppercase skew-x-[8deg] shadow-lg -mt-2 z-10 relative">
+					<span class="inline-block skew-x-[-8deg]">DE VÍDEOS</span>
 				</div>
 			</div>
-			<div id="banner_videos" class="carousel slide" data-interval="false"  data-aos="fade-up" data-aos-offset="300" data-aos-duration="2000">
+		</div>
+			<div id="banner_videos" class="carousel slide mb-32" data-interval="false"  data-aos="fade-up" data-aos-offset="300" data-aos-duration="2000">
 			  <div class="carousel-inner">
 			  						<div class="carousel-item active">
 				    	<div class="embed-responsive embed-responsive-16by9">
@@ -1532,62 +1533,53 @@ include 'header.php';
 })();
 </script>
 
-<section id="a_aprovados" class="bg_green bar-right relative overflow-hidden">
+<section id="a_aprovados" class="bg-surface relative overflow-hidden py-24">
 	<!-- Watermark X -->
-	<img src="https://colegioecursoconexao.com.br/assets/images/x-laranja.png" class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] md:w-[800px] pointer-events-none z-0" style="filter: brightness(0) invert(1); opacity: 0.08;" alt="">
-	<div class="skew-left-3 relative z-10">
-		<div class="container gray-bg">
-			<div class="col-md-12">
-				<div class="flex flex-col items-center justify-center mb-16" data-aos="fade-down">
-					<div class="relative flex flex-col items-center z-10 w-full max-w-sm">
-						<div class="bg-secondary text-white px-10 py-3 font-black tracking-widest text-lg uppercase skew-x-[-10deg] shadow-lg z-20">
-							<span class="inline-block skew-x-[10deg]">GRANDES</span>
-						</div>
-						<div class="bg-primary text-white px-8 py-3 font-black tracking-widest text-sm uppercase skew-x-[8deg] shadow-lg -mt-2 z-10 relative">
-							<span class="inline-block skew-x-[-8deg]">CONQUISTAS</span>
-						</div>
-					</div>
+	<img src="https://colegioecursoconexao.com.br/assets/images/x-laranja.png" class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] md:w-[800px] pointer-events-none z-0" style="filter: brightness(0) invert(1); opacity: 0.04;" alt="">
+	<div class="container mx-auto px-6 relative z-10">
+		<div class="flex flex-col items-center justify-center mb-16" data-aos="fade-down">
+			<div class="relative flex flex-col items-center z-10 w-full max-w-sm">
+				<div class="bg-secondary text-white px-10 py-3 font-black tracking-widest text-lg uppercase skew-x-[-10deg] shadow-lg z-20">
+					<span class="inline-block skew-x-[10deg]">GRANDES</span>
 				</div>
-				<div class="row my-5"  data-aos="fade-left" data-aos-offset="300" data-aos-duration="1000">
-											<div class="col-md-4 mb-5">
-							<a class="card c_alunos" href="https://colegioecursoconexao.com.br/alunos_aprovados?ano=2024">
-								<div class="card-title text-center bg-card"><h4 class="mb-0">2024</h4>
-								</div>
-								<div class="img-card">
-									<img src="https://colegioecursoconexao.com.br/media/cache/square_medium/uploads/aprovados/1709913212-c.png" alt="" class="w-100" loading="lazy"/>
-								</div>
-							</a>
-						</div>
-											<div class="col-md-4 mb-5">
-							<a class="card c_alunos" href="https://colegioecursoconexao.com.br/alunos_aprovados?ano=2023">
-								<div class="card-title text-center bg-card"><h4 class="mb-0">2023</h4>
-								</div>
-								<div class="img-card">
-									<img src="https://colegioecursoconexao.com.br/media/cache/square_medium/uploads/aprovados/1679507249-c.jpeg" alt="" class="w-100" loading="lazy"/>
-								</div>
-							</a>
-						</div>
-											<div class="col-md-4 mb-5">
-							<a class="card c_alunos" href="https://colegioecursoconexao.com.br/alunos_aprovados?ano=2022">
-								<div class="card-title text-center bg-card"><h4 class="mb-0">2022</h4>
-								</div>
-								<div class="img-card">
-									<img src="https://colegioecursoconexao.com.br/media/cache/square_medium/uploads/aprovados/1679490456-c.jpeg" alt="" class="w-100" loading="lazy"/>
-								</div>
-							</a>
-						</div>
-									</div>
-
-			</div>
-			<div class="row mb-5">
-				<div class="col-md-12 d-flex justify-content-center mt-4">
-					<div class="btn btn-more btn-banner btn-orange text-white">
-						<a href="https://colegioecursoconexao.com.br/alunos_aprovados" class="text-white text-decoration-none">Ver todos<i class="fas fa-chevron-right ml-1"></i></a>
-					</div>
+				<div class="bg-primary text-white px-8 py-3 font-black tracking-widest text-sm uppercase skew-x-[8deg] shadow-lg -mt-2 z-10 relative">
+					<span class="inline-block skew-x-[-8deg]">CONQUISTAS</span>
 				</div>
 			</div>
 		</div>
-	</div>
+				<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-5xl mx-auto mb-12">
+					<a href="https://colegioecursoconexao.com.br/alunos_aprovados?ano=2024" class="group relative bg-white rounded-2xl shadow-lg border border-slate-100 hover:border-secondary transition-all duration-500 overflow-hidden flex flex-col transform hover:-translate-y-2 hover:shadow-2xl" data-aos="fade-up" data-aos-delay="0">
+						<div class="bg-primary text-white text-center py-4 font-black tracking-widest text-xl group-hover:bg-secondary transition-colors duration-500">
+							2024
+						</div>
+						<div class="flex-1 w-full bg-slate-50">
+							<img src="https://colegioecursoconexao.com.br/media/cache/square_medium/uploads/aprovados/1709913212-c.png" alt="" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" loading="lazy"/>
+						</div>
+					</a>
+					<a href="https://colegioecursoconexao.com.br/alunos_aprovados?ano=2023" class="group relative bg-white rounded-2xl shadow-lg border border-slate-100 hover:border-secondary transition-all duration-500 overflow-hidden flex flex-col transform hover:-translate-y-2 hover:shadow-2xl" data-aos="fade-up" data-aos-delay="100">
+						<div class="bg-primary text-white text-center py-4 font-black tracking-widest text-xl group-hover:bg-secondary transition-colors duration-500">
+							2023
+						</div>
+						<div class="flex-1 w-full bg-slate-50">
+							<img src="https://colegioecursoconexao.com.br/media/cache/square_medium/uploads/aprovados/1679507249-c.jpeg" alt="" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" loading="lazy"/>
+						</div>
+					</a>
+					<a href="https://colegioecursoconexao.com.br/alunos_aprovados?ano=2022" class="group relative bg-white rounded-2xl shadow-lg border border-slate-100 hover:border-secondary transition-all duration-500 overflow-hidden flex flex-col transform hover:-translate-y-2 hover:shadow-2xl" data-aos="fade-up" data-aos-delay="200">
+						<div class="bg-primary text-white text-center py-4 font-black tracking-widest text-xl group-hover:bg-secondary transition-colors duration-500">
+							2022
+						</div>
+						<div class="flex-1 w-full bg-slate-50">
+							<img src="https://colegioecursoconexao.com.br/media/cache/square_medium/uploads/aprovados/1679490456-c.jpeg" alt="" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" loading="lazy"/>
+						</div>
+					</a>
+				</div>
+				<div class="flex justify-center" data-aos="fade-up" data-aos-delay="300">
+					<a href="https://colegioecursoconexao.com.br/alunos_aprovados" class="inline-flex items-center gap-2 bg-primary hover:bg-secondary text-white px-8 py-3.5 rounded-full font-bold text-sm uppercase tracking-widest transition-all duration-300 shadow-lg group-hover:scale-105 mb-32">
+						Ver todos <i class="fas fa-chevron-right text-[10px]"></i>
+					</a>
+				</div>
+			</div>
+		</div>
 </section>
 
 <section id="prof_fundamental" class="bg-primary bar-right bg-scroll relative overflow-hidden py-12">
@@ -1928,7 +1920,7 @@ include 'header.php';
 
 
            -->
-		<div class="col-md-12 d-flex justify-content-center">
+		<div class="col-md-12 d-flex justify-content-center mb-32">
 			<button id="more-prof" data-toggle="collapse" data-target="#prof-more" class="navbar-toggler more-tabs">
 				<i class="fas fa-plus text-white fas-blue"></i>
 			</button>
@@ -1940,10 +1932,14 @@ include 'header.php';
 </section>
 
 
-<section id="depoimentos" class="bg_orange bar-right relative overflow-hidden">
+<section id="depoimentos" class="relative overflow-hidden bg-secondary">
+	<!-- Interactive Radial Gradient Overlay -->
+	<div id="vozes-gradient-overlay" class="absolute inset-0 pointer-events-none z-0 transition-opacity duration-300" style="background: radial-gradient(circle at var(--cursor-x, 50%) var(--cursor-y, 50%), #ffaf54 0%, #f07d00 40%, #c46600 100%);"></div>
+	
 	<!-- Watermark X -->
 	<img src="https://colegioecursoconexao.com.br/assets/images/x-laranja.png" class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] md:w-[800px] pointer-events-none z-0" style="filter: brightness(0) invert(1); opacity: 0.08;" alt="">
-	<div class="skew-left-3 relative z-10">
+	
+	<div class="relative z-10">
 		<div class="container mx-auto px-6 py-24">
 			<div class="flex flex-col items-center justify-center mb-16" data-aos="fade-down">
 				<div class="relative flex flex-col items-center z-10 w-full max-w-sm">
@@ -2025,7 +2021,7 @@ include 'header.php';
 			</div>
 
 			<div class="flex justify-center" data-aos="fade-up">
-				<a href="https://colegioecursoconexao.com.br/depoimentos/3" class="inline-flex items-center gap-2 bg-primary hover:bg-secondary text-white px-8 py-3.5 rounded-full font-bold text-sm uppercase tracking-widest transition-all duration-300 shadow-lg">
+				<a href="https://colegioecursoconexao.com.br/depoimentos/3" class="inline-flex items-center gap-2 bg-primary hover:bg-[#080a28] text-white px-8 py-3.5 rounded-full font-bold text-sm uppercase tracking-widest transition-all duration-300 shadow-lg">
 					Ver todos <i class="fas fa-chevron-right text-[10px]"></i>
 				</a>
 			</div>
@@ -2033,14 +2029,36 @@ include 'header.php';
 	</div>
 </section>
 
-<section id="mapa-fund" >
-	<div class="col-md-12">
-		<div class="map-title bg-title-blue">
-			<h4 class="font-weight-bold">Localização</h4>
-		</div>
-	</div>
-	<a href="https://goo.gl/maps/P8uaaNnSix7ufk6LA" target="_blank"><img src="https://colegioecursoconexao.com.br/assets/imgs/mapa-em.png" class="w-100" alt="Mapa conexão"></a>
-</section>
+<!-- Interactive Cursor Script for Vozes do Conexão -->
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    const vozesSec = document.getElementById('depoimentos');
+    const overlay = document.getElementById('vozes-gradient-overlay');
+    
+    if(vozesSec && overlay) {
+        // Apply smooth transition only for leaving/entering mouse, not movement tracking
+        overlay.style.transition = 'opacity 0.3s ease';
+        
+        vozesSec.addEventListener('mousemove', (e) => {
+            const rect = vozesSec.getBoundingClientRect();
+            const x = e.clientX - rect.left;
+            const y = e.clientY - rect.top;
+            
+            // Set CSS vars efficiently for realtime tracking
+            overlay.style.setProperty('--cursor-x', `${x}px`);
+            overlay.style.setProperty('--cursor-y', `${y}px`);
+        });
+
+        // Re-center when mouse leaves
+        vozesSec.addEventListener('mouseleave', () => {
+            overlay.style.setProperty('--cursor-x', `50%`);
+            overlay.style.setProperty('--cursor-y', `50%`);
+        });
+    }
+});
+</script>
+
+
 
 <section id="down-estude" class="py-28 bg-primary relative overflow-hidden mt-12">
 	<!-- Decorative Background Glows -->
