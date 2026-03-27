@@ -4,53 +4,62 @@ include 'header.php';
 ?>
 <main>
 
-<!-- Hero Banner Moderno -->
-<section class="relative h-screen min-h-[600px] flex items-center justify-center overflow-hidden" data-aos="fade-in" data-aos-duration="1500">
-    <!-- Background Image with Overlay -->
-    <div class="absolute inset-0 w-full h-full">
-        <img src="https://colegioecursoconexao.com.br/uploads/banners/1690313395-c.png" alt="Ensino Médio" class="absolute w-full h-full object-cover object-center" />
-        <!-- Edge vignette — gentle all-around darkening, no colour cast -->
-        <div class="absolute inset-0" style="background: radial-gradient(ellipse 100% 90% at 50% 50%, transparent 35%, rgba(0,0,0,.55) 100%);"></div>
-        <!-- Bottom grounding — cinematic depth -->
-        <div class="absolute inset-0" style="background: linear-gradient(to top, rgba(0,0,0,.6) 0%, rgba(0,0,0,.15) 25%, transparent 50%);"></div>
-        <!-- Top navbar shadow -->
-        <div class="absolute inset-0" style="background: linear-gradient(to bottom, rgba(0,0,0,.40) 0%, transparent 22%);"></div>
+<!-- Hero Banner Split-Screen "X" Mask Design -->
+<section class="relative h-[85vh] min-h-[650px] flex items-center overflow-hidden bg-[#080a28]" data-aos="fade-in" data-aos-duration="1500">
+    
+    <!-- Base Layer: The Full Width Photo -->
+    <div class="absolute inset-0 z-0">
+        <img src="https://colegioecursoconexao.com.br/uploads/banners/1690313395-c.png" alt="Ensino Médio Base" class="w-full h-full object-cover object-center" />
+    </div>
+
+    <!-- The X Geometric Divider Mask (Glassmorphism Blur) -->
+    <!-- Cuts into the right side with a sharp X glass shape -->
+    <div class="hidden lg:block absolute top-1/2 left-[48%] -translate-y-1/2 -translate-x-[50%] w-[130vh] h-[130vh] z-10 pointer-events-none bg-[#080a28]/85 backdrop-blur-[24px]"
+         style="-webkit-mask-image: url('assets/images/x-laranja.png'); -webkit-mask-size: contain; -webkit-mask-repeat: no-repeat; -webkit-mask-position: center; mask-image: url('assets/images/x-laranja.png'); mask-size: contain; mask-repeat: no-repeat; mask-position: center;">
     </div>
     
-    <!-- Content -->
-    <div class="container mx-auto px-6 relative z-10">
-        <div class="max-w-xl" data-aos="fade-right" data-aos-duration="1000">
-            <!-- Glassmorphism card: legibility without covering the photo -->
-            <!-- Updated Hero Banner with Glassmorphism (Faça Parte style) -->
-            <div class="group relative" data-aos="fade-up" data-aos-duration="1200">
-                <!-- ambient hover glow -->
-                <div class="absolute inset-0 bg-secondary/20 rounded-3xl blur-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none"></div>
-                <div class="relative bg-[#080a28]/70 hover:bg-[#080a28]/80 border border-white/10 hover:border-secondary/40 backdrop-blur-xl p-10 md:p-12 rounded-3xl transition-all duration-500 max-w-2xl shadow-[0_8px_40px_rgba(0,0,0,0.4)] overflow-hidden">
-                    <h1 class="text-5xl md:text-6xl font-black text-white leading-tight mb-3 font-headline uppercase tracking-tight" style="text-shadow: 0 2px 8px rgba(0,0,0,0.8), 0 6px 24px rgba(0,0,0,0.4);">
-                        Ensino <span class="text-secondary">Médio</span>
-                    </h1>
-                    <h4 class="text-lg md:text-xl text-white font-semibold mb-8 leading-relaxed" style="text-shadow: 0 1px 4px rgba(0,0,0,0.8);">
-                        Forte no ensino, sólido nos valores e único nos resultados.
-                    </h4>
-                    <div class="flex flex-wrap gap-4">
-                        <a href="https://colegioecursoconexao.com.br/inscricao_em" class="bg-secondary hover:bg-orange-500 text-white px-8 py-3.5 rounded-full font-bold text-sm uppercase tracking-widest transition-all duration-300 shadow-lg hover:shadow-[0_0_30px_rgba(240,125,0,0.4)] flex items-center gap-2 group-hover:scale-105" style="color:#fff">
-                            Inscreva-se
-                            <i class="fas fa-arrow-right text-[10px] group-hover:translate-x-1 transition-transform"></i>
-                        </a>
-                        <a href="https://colegioecursoconexao.com.br/faca_uma_visita?s=3" class="bg-white/10 hover:bg-white/20 text-white backdrop-blur-sm border border-white/25 hover:border-white px-8 py-3.5 rounded-full font-bold text-sm uppercase tracking-widest transition-all duration-300 flex items-center gap-2">
-                            Agende sua visita
-                        </a>
-                    </div>
+    <!-- Left Layer Backdrop (Solidizes the left portion before the X) -->
+    <!-- Mobile gets 100% overlay, Desktop gets 48% overlay -->
+    <div class="absolute top-0 left-0 w-full lg:w-[48%] h-full z-10 bg-[#080a28]/85 backdrop-blur-[24px]"></div>
+    
+    <!-- Decorative Glowing Accent behind the X shape -->
+    <div class="hidden lg:block absolute top-[50%] left-[48.5%] -translate-y-1/2 -translate-x-[50%] w-[130vh] h-[130vh] z-0 pointer-events-none opacity-[0.15] mix-blend-screen"
+         style="background-color: #F07D00; -webkit-mask-image: url('assets/images/x-laranja.png'); -webkit-mask-size: contain; -webkit-mask-repeat: no-repeat; -webkit-mask-position: center;">
+    </div>
+
+    <!-- Typography/Content (Left Side) -->
+    <div class="container mx-auto px-6 relative z-20">
+        <div class="max-w-xl lg:max-w-xl" data-aos="fade-right" data-aos-duration="1000">
+            <!-- Micro-header mimicking reference -->
+            <div class="flex items-center gap-4 mb-6">
+                <div class="flex gap-1.5">
+                    <div class="w-1.5 h-1.5 bg-secondary"></div>
+                    <div class="w-1.5 h-1.5 bg-secondary/50"></div>
+                </div>
+                <span class="text-white/60 text-xs font-bold tracking-[0.25em] uppercase">Colégio Conexão — Ensino Médio</span>
+            </div>
+            
+            <h1 class="text-5xl lg:text-[5rem] font-black text-white leading-[1.05] mb-6 font-headline uppercase tracking-tighter">
+                Ensino <br><span class="text-secondary">Médio</span>
+            </h1>
+            
+            <p class="text-[17px] text-white/70 font-medium mb-10 leading-relaxed max-w-md pr-4">
+                Forte no ensino, sólido nos valores e único nos resultados. Prepare-se para o futuro com a estrutura mais completa.
+            </p>
+            
+            <div class="flex items-center gap-6">
+                <a href="https://colegioecursoconexao.com.br/inscricao_em" class="bg-secondary hover:bg-orange-500 text-white px-8 py-4 font-bold text-sm uppercase tracking-wider transition-all duration-300 shadow-[0_8px_30px_rgba(240,125,0,0.3)] flex items-center justify-center min-w-[200px] group-hover:-translate-y-1">
+                    Inscreva-se
+                </a>
+                
+                <!-- Chevron arrows mimicking reference -->
+                <div class="hidden sm:flex gap-1.5 text-white/30">
+                    <i class="fas fa-caret-right text-lg"></i>
+                    <i class="fas fa-caret-right text-lg opacity-60"></i>
+                    <i class="fas fa-caret-right text-lg opacity-30"></i>
                 </div>
             </div>
         </div>
-    </div>
-    
-    <!-- Scroll down indicator -->
-    <div class="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce z-10 text-white/50">
-        <a href="#proposta" class="cursor-pointer hover:text-white transition-colors duration-300">
-            <i class="fas fa-chevron-down text-2xl"></i>
-        </a>
     </div>
 </section>
 
