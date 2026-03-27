@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 500">
+  <rect width="400" height="500" fill="#f8f9ff"/>
+  <circle cx="200" cy="200" r="80" fill="#d3e4fe"/>
+  <rect x="120" y="300" width="160" height="150" fill="#d3e4fe" rx="20"/>
+  <text x="50%" y="480%" dominant-baseline="middle" text-anchor="middle" font-family="Plus Jakarta Sans, sans-serif" font-weight="600" font-size="20" fill="#0D1636">ALUNO APROVADO</text>
+</svg>

@@ -1,0 +1,15 @@
+{
+  "name": "Colégio Conexão",
+  "short_name": "Conexão",
+  "start_url": "./v1.html",
+  "display": "standalone",
+  "background_color": "#f8f9ff",
+  "theme_color": "#0D1636",
+  "icons": [
+    {
+      "src": "assets/images/logo.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}
