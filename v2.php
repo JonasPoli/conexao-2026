@@ -21,21 +21,26 @@ include 'header.php';
     <div class="container mx-auto px-6 relative z-10">
         <div class="max-w-xl" data-aos="fade-right" data-aos-duration="1000">
             <!-- Glassmorphism card: legibility without covering the photo -->
-            <div style="background: rgba(8,10,40,0.42); backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px); border: 1px solid rgba(255,255,255,0.10); border-radius: 20px; padding: 2.75rem 2.75rem 2.25rem; box-shadow: 0 8px 40px rgba(0,0,0,0.40), inset 0 1px 0 rgba(255,255,255,0.07);">
-                <h1 class="text-5xl md:text-6xl font-black text-white leading-tight mb-3 font-headline uppercase tracking-tight" style="text-shadow: 0 2px 8px rgba(0,0,0,0.6), 0 6px 24px rgba(0,0,0,0.3);">
-                    Ensino <span class="text-secondary">Médio</span>
-                </h1>
-                <h4 class="text-lg md:text-xl text-white/80 font-medium mb-8 leading-relaxed" style="text-shadow: 0 1px 4px rgba(0,0,0,0.5);">
-                    Forte no ensino, sólido nos valores e único nos resultados.
-                </h4>
-                <div class="flex flex-wrap gap-4">
-                    <a href="https://colegioecursoconexao.com.br/inscricao_em" class="bg-secondary hover:bg-orange-500 text-white px-8 py-3.5 rounded-full font-bold text-sm uppercase tracking-widest transition-all duration-300 shadow-lg hover:shadow-orange-500/40 flex items-center gap-2 group" style="color:#fff">
-                        Inscreva-se
-                        <i class="fas fa-chevron-right text-[10px] group-hover:translate-x-1 transition-transform"></i>
-                    </a>
-                    <a href="https://colegioecursoconexao.com.br/faca_uma_visita?s=3" class="bg-white/10 hover:bg-white/20 text-white backdrop-blur-sm border border-white/25 hover:border-white/50 px-8 py-3.5 rounded-full font-bold text-sm uppercase tracking-widest transition-all duration-300 flex items-center gap-2">
-                        Agende sua visita
-                    </a>
+            <!-- Updated Hero Banner with Glassmorphism (Faça Parte style) -->
+            <div class="group relative" data-aos="fade-up" data-aos-duration="1200">
+                <!-- ambient hover glow -->
+                <div class="absolute inset-0 bg-secondary/20 rounded-3xl blur-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none"></div>
+                <div class="relative bg-[#080a28]/70 hover:bg-[#080a28]/80 border border-white/10 hover:border-secondary/40 backdrop-blur-xl p-10 md:p-12 rounded-3xl transition-all duration-500 max-w-2xl shadow-[0_8px_40px_rgba(0,0,0,0.4)] overflow-hidden">
+                    <h1 class="text-5xl md:text-6xl font-black text-white leading-tight mb-3 font-headline uppercase tracking-tight" style="text-shadow: 0 2px 8px rgba(0,0,0,0.8), 0 6px 24px rgba(0,0,0,0.4);">
+                        Ensino <span class="text-secondary">Médio</span>
+                    </h1>
+                    <h4 class="text-lg md:text-xl text-white font-semibold mb-8 leading-relaxed" style="text-shadow: 0 1px 4px rgba(0,0,0,0.8);">
+                        Forte no ensino, sólido nos valores e único nos resultados.
+                    </h4>
+                    <div class="flex flex-wrap gap-4">
+                        <a href="https://colegioecursoconexao.com.br/inscricao_em" class="bg-secondary hover:bg-orange-500 text-white px-8 py-3.5 rounded-full font-bold text-sm uppercase tracking-widest transition-all duration-300 shadow-lg hover:shadow-[0_0_30px_rgba(240,125,0,0.4)] flex items-center gap-2 group-hover:scale-105" style="color:#fff">
+                            Inscreva-se
+                            <i class="fas fa-arrow-right text-[10px] group-hover:translate-x-1 transition-transform"></i>
+                        </a>
+                        <a href="https://colegioecursoconexao.com.br/faca_uma_visita?s=3" class="bg-white/10 hover:bg-white/20 text-white backdrop-blur-sm border border-white/25 hover:border-white px-8 py-3.5 rounded-full font-bold text-sm uppercase tracking-widest transition-all duration-300 flex items-center gap-2">
+                            Agende sua visita
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -278,6 +283,8 @@ include 'header.php';
         <div class="absolute -top-40 -right-40 w-96 h-96 bg-secondary rounded-full blur-[100px]"></div>
         <div class="absolute bottom-10 left-10 w-80 h-80 bg-blue-500 rounded-full blur-[100px]"></div>
     </div>
+    <!-- Watermark X -->
+    <img src="https://colegioecursoconexao.com.br/assets/images/x-laranja.png" class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] md:w-[800px] pointer-events-none z-0" style="filter: brightness(0) invert(1); opacity: 0.08;" alt="">
 
     <div class="container mx-auto px-6 relative z-10 mb-16">
         <!-- Badge Title -->
@@ -317,14 +324,15 @@ include 'header.php';
             foreach ($diferenciais as $index => $dif) {
                 $delay = ($index % 3) * 50;
                 echo '
-                <div class="relative group" data-aos="fade-up" data-aos-delay="'.$delay.'">
-                    <div class="absolute inset-0 bg-secondary rounded-2xl rotate-3 group-hover:rotate-6 opacity-60 transition-transform duration-500"></div>
-                    <div class="absolute inset-0 bg-blue-400 rounded-2xl -rotate-3 group-hover:-rotate-6 opacity-40 transition-transform duration-500"></div>
-                    <div class="relative flex items-start gap-4 p-6 rounded-2xl bg-white border border-slate-100 hover:border-secondary transition-colors duration-300 shadow-[0_8px_30px_rgba(0,0,0,0.12)] h-full">
-                        <div class="w-12 h-12 rounded-full bg-secondary text-white flex shrink-0 items-center justify-center text-lg shadow-lg group-hover:scale-110 group-hover:rotate-12 transition-transform duration-300">
+                <div class="group relative h-full" data-aos="fade-up" data-aos-delay="'.$delay.'">
+                    <!-- ambient hover glow -->
+                    <div class="absolute inset-0 bg-secondary/20 rounded-2xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
+                    <!-- glass card -->
+                    <div class="relative flex items-center gap-4 p-6 rounded-2xl bg-white/[0.03] hover:bg-white/[0.06] border border-white/10 hover:border-secondary/40 backdrop-blur-md transition-all duration-500 h-full">
+                        <div class="w-12 h-12 rounded-xl bg-secondary/20 text-secondary flex shrink-0 items-center justify-center text-lg shadow-lg group-hover:bg-secondary group-hover:text-white group-hover:scale-110 group-hover:-rotate-12 transition-all duration-500">
                             <i class="fas fa-check"></i>
                         </div>
-                        <p class="text-[16px] font-bold text-primary leading-relaxed mt-1">
+                        <p class="text-[15px] font-medium text-white/90 leading-relaxed m-0 group-hover:text-white transition-colors">
                             '.$dif.'
                         </p>
                     </div>
@@ -1524,8 +1532,10 @@ include 'header.php';
 })();
 </script>
 
-<section id="a_aprovados" class="bg_green bar-right">
-	<div class="skew-left-3">
+<section id="a_aprovados" class="bg_green bar-right relative overflow-hidden">
+	<!-- Watermark X -->
+	<img src="https://colegioecursoconexao.com.br/assets/images/x-laranja.png" class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] md:w-[800px] pointer-events-none z-0" style="filter: brightness(0) invert(1); opacity: 0.08;" alt="">
+	<div class="skew-left-3 relative z-10">
 		<div class="container gray-bg">
 			<div class="col-md-12">
 				<div class="flex flex-col items-center justify-center mb-16" data-aos="fade-down">
@@ -1580,189 +1590,260 @@ include 'header.php';
 	</div>
 </section>
 
-<section id="prof_fundamental" class="bg_gray bar-right bg-scroll">
-	<div class="container skew-left-3">
-		<div class="row mb-5">
+<section id="prof_fundamental" class="bg-primary bar-right bg-scroll relative overflow-hidden py-12">
+	<!-- Decorative Background Glows (same as FAÇA PARTE) -->
+	<div class="absolute inset-0 pointer-events-none overflow-hidden z-0">
+		<!-- Watermark X -->
+		<img src="https://colegioecursoconexao.com.br/assets/images/x-laranja.png" class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] md:w-[800px] pointer-events-none" style="filter: brightness(0) invert(1); opacity: 0.08;" alt="">
+
+		<div class="absolute -top-40 -left-40 w-[600px] h-[600px] bg-secondary/10 rounded-full blur-[120px]"></div>
+		<div class="absolute top-[40%] -right-40 w-[500px] h-[500px] bg-blue-400/10 rounded-full blur-[100px]"></div>
+		<div class="absolute inset-0 opacity-[0.03]" style="background-image: radial-gradient(#fff 1px, transparent 1px); background-size: 32px 32px;"></div>
+	</div>
+
+	<div class="container mx-auto px-6 relative z-10 skew-left-3">
+		<div class="row mb-12">
 			<div class="col-md-12 mb-5">
 				<div class="flex flex-col items-center justify-center mb-16" data-aos="fade-down">
 					<div class="relative flex flex-col items-center z-10 w-full max-w-sm">
 						<div class="bg-secondary text-white px-10 py-3 font-black tracking-widest text-lg uppercase skew-x-[-10deg] shadow-lg z-20">
 							<span class="inline-block skew-x-[10deg]">CORPO</span>
 						</div>
-						<div class="bg-primary text-white px-8 py-3 font-black tracking-widest text-sm uppercase skew-x-[8deg] shadow-lg -mt-2 z-10 relative">
+						<div class="bg-white text-primary px-8 py-3 font-black tracking-widest text-sm uppercase skew-x-[8deg] shadow-lg -mt-2 z-10 relative">
 							<span class="inline-block skew-x-[-8deg]">DOCENTE</span>
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
-		<div class="row">
-							<div class="col-lg-4 col-sm-6 d-flex mb-5" data-aos="fade-up" data-aos-offset="300" data-aos-duration="2000">
-					<div class="col-md-4">
-						<img src="https://colegioecursoconexao.com.br/media/cache/square_small/uploads/staff/1725995769-c.jpeg" class="effect-circle w-100 rounded-circle" alt="" loading="lazy"/>
+		<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+							<div class="group relative" data-aos="fade-up" data-aos-duration="1000">
+								<div class="absolute inset-0 bg-secondary/20 rounded-2xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
+								<div class="relative h-full bg-white/[0.03] hover:bg-white/[0.06] border border-white/10 hover:border-secondary/40 backdrop-blur-md p-4 rounded-2xl transition-all duration-500 flex items-center gap-5">
+									<div class="w-16 h-16 shrink-0">
+										<img src="https://colegioecursoconexao.com.br/media/cache/square_small/uploads/staff/1725995769-c.jpeg" class="w-full h-full object-cover rounded-xl border border-white/20 shadow-lg group-hover:scale-105 transition-transform duration-500" alt="" loading="lazy"/>
+									</div>
+									<div>
+										<h5 class="mb-1 text-white font-bold text-lg leading-tight group-hover:text-secondary transition-colors">Adriano Di Nardo</h5>
+										<p class="m-0 text-white/50 text-sm uppercase tracking-wider font-semibold">Física</p>
+									</div>
+								</div>
+							</div>
+							<div class="group relative" data-aos="fade-up" data-aos-duration="1000">
+								<div class="absolute inset-0 bg-secondary/20 rounded-2xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
+								<div class="relative h-full bg-white/[0.03] hover:bg-white/[0.06] border border-white/10 hover:border-secondary/40 backdrop-blur-md p-4 rounded-2xl transition-all duration-500 flex items-center gap-5">
+									<div class="w-16 h-16 shrink-0">
+										<img src="https://colegioecursoconexao.com.br/media/cache/square_small/uploads/staff/1725995782-c.jpeg" class="w-full h-full object-cover rounded-xl border border-white/20 shadow-lg group-hover:scale-105 transition-transform duration-500" alt="" loading="lazy"/>
+									</div>
+									<div>
+										<h5 class="mb-1 text-white font-bold text-lg leading-tight group-hover:text-secondary transition-colors">Arleise de Alencar</h5>
+										<p class="m-0 text-white/50 text-sm uppercase tracking-wider font-semibold">Química</p>
+									</div>
+								</div>
+							</div>
+							<div class="group relative" data-aos="fade-up" data-aos-duration="1000">
+								<div class="absolute inset-0 bg-secondary/20 rounded-2xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
+								<div class="relative h-full bg-white/[0.03] hover:bg-white/[0.06] border border-white/10 hover:border-secondary/40 backdrop-blur-md p-4 rounded-2xl transition-all duration-500 flex items-center gap-5">
+									<div class="w-16 h-16 shrink-0">
+										<img src="https://colegioecursoconexao.com.br/media/cache/square_small/uploads/staff/1738271306-c.jpeg" class="w-full h-full object-cover rounded-xl border border-white/20 shadow-lg group-hover:scale-105 transition-transform duration-500" alt="" loading="lazy"/>
+									</div>
+									<div>
+										<h5 class="mb-1 text-white font-bold text-lg leading-tight group-hover:text-secondary transition-colors">Fábio Galvão</h5>
+										<p class="m-0 text-white/50 text-sm uppercase tracking-wider font-semibold">Educação Física</p>
+									</div>
+								</div>
+							</div>
+							<div class="group relative" data-aos="fade-up" data-aos-duration="1000">
+								<div class="absolute inset-0 bg-secondary/20 rounded-2xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
+								<div class="relative h-full bg-white/[0.03] hover:bg-white/[0.06] border border-white/10 hover:border-secondary/40 backdrop-blur-md p-4 rounded-2xl transition-all duration-500 flex items-center gap-5">
+									<div class="w-16 h-16 shrink-0">
+										<img src="https://colegioecursoconexao.com.br/media/cache/square_small/uploads/staff/1725995797-c.jpeg" class="w-full h-full object-cover rounded-xl border border-white/20 shadow-lg group-hover:scale-105 transition-transform duration-500" alt="" loading="lazy"/>
+									</div>
+									<div>
+										<h5 class="mb-1 text-white font-bold text-lg leading-tight group-hover:text-secondary transition-colors">Leonardo Viveiros (Bolinha)</h5>
+										<p class="m-0 text-white/50 text-sm uppercase tracking-wider font-semibold">Matemática</p>
+									</div>
+								</div>
+							</div>
+							<div class="group relative" data-aos="fade-up" data-aos-duration="1000">
+								<div class="absolute inset-0 bg-secondary/20 rounded-2xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
+								<div class="relative h-full bg-white/[0.03] hover:bg-white/[0.06] border border-white/10 hover:border-secondary/40 backdrop-blur-md p-4 rounded-2xl transition-all duration-500 flex items-center gap-5">
+									<div class="w-16 h-16 shrink-0">
+										<img src="https://colegioecursoconexao.com.br/media/cache/square_small/uploads/staff/1725995809-c.jpeg" class="w-full h-full object-cover rounded-xl border border-white/20 shadow-lg group-hover:scale-105 transition-transform duration-500" alt="" loading="lazy"/>
+									</div>
+									<div>
+										<h5 class="mb-1 text-white font-bold text-lg leading-tight group-hover:text-secondary transition-colors">Samir Mohamad</h5>
+										<p class="m-0 text-white/50 text-sm uppercase tracking-wider font-semibold">Biologia</p>
+									</div>
+								</div>
+							</div>
+							<div class="group relative" data-aos="fade-up" data-aos-duration="1000">
+								<div class="absolute inset-0 bg-secondary/20 rounded-2xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
+								<div class="relative h-full bg-white/[0.03] hover:bg-white/[0.06] border border-white/10 hover:border-secondary/40 backdrop-blur-md p-4 rounded-2xl transition-all duration-500 flex items-center gap-5">
+									<div class="w-16 h-16 shrink-0">
+										<img src="https://colegioecursoconexao.com.br/media/cache/square_small/uploads/staff/1738271416-c.jpeg" class="w-full h-full object-cover rounded-xl border border-white/20 shadow-lg group-hover:scale-105 transition-transform duration-500" alt="" loading="lazy"/>
+									</div>
+									<div>
+										<h5 class="mb-1 text-white font-bold text-lg leading-tight group-hover:text-secondary transition-colors">Igor Guzzi</h5>
+										<p class="m-0 text-white/50 text-sm uppercase tracking-wider font-semibold">Física</p>
+									</div>
+								</div>
+							</div>
 					</div>
-					<div class="col-md-8 my-auto">
-						<h5 class="mb-1 c_orange">Adriano Di Nardo</h5>
-						<p class="m-0">Física</p>
-					</div>
-				</div>
-							<div class="col-lg-4 col-sm-6 d-flex mb-5" data-aos="fade-up" data-aos-offset="300" data-aos-duration="2000">
-					<div class="col-md-4">
-						<img src="https://colegioecursoconexao.com.br/media/cache/square_small/uploads/staff/1725995782-c.jpeg" class="effect-circle w-100 rounded-circle" alt="" loading="lazy"/>
-					</div>
-					<div class="col-md-8 my-auto">
-						<h5 class="mb-1 c_orange">Arleise de Alencar</h5>
-						<p class="m-0">Química</p>
-					</div>
-				</div>
-							<div class="col-lg-4 col-sm-6 d-flex mb-5" data-aos="fade-up" data-aos-offset="300" data-aos-duration="2000">
-					<div class="col-md-4">
-						<img src="https://colegioecursoconexao.com.br/media/cache/square_small/uploads/staff/1738271306-c.jpeg" class="effect-circle w-100 rounded-circle" alt="" loading="lazy"/>
-					</div>
-					<div class="col-md-8 my-auto">
-						<h5 class="mb-1 c_orange">Fábio Galvão</h5>
-						<p class="m-0">Educação Física</p>
-					</div>
-				</div>
-							<div class="col-lg-4 col-sm-6 d-flex mb-5" data-aos="fade-up" data-aos-offset="300" data-aos-duration="2000">
-					<div class="col-md-4">
-						<img src="https://colegioecursoconexao.com.br/media/cache/square_small/uploads/staff/1725995797-c.jpeg" class="effect-circle w-100 rounded-circle" alt="" loading="lazy"/>
-					</div>
-					<div class="col-md-8 my-auto">
-						<h5 class="mb-1 c_orange">Leonardo Viveiros (Bolinha)</h5>
-						<p class="m-0">Matemática</p>
-					</div>
-				</div>
-							<div class="col-lg-4 col-sm-6 d-flex mb-5" data-aos="fade-up" data-aos-offset="300" data-aos-duration="2000">
-					<div class="col-md-4">
-						<img src="https://colegioecursoconexao.com.br/media/cache/square_small/uploads/staff/1725995809-c.jpeg" class="effect-circle w-100 rounded-circle" alt="" loading="lazy"/>
-					</div>
-					<div class="col-md-8 my-auto">
-						<h5 class="mb-1 c_orange">Samir Mohamad</h5>
-						<p class="m-0">Biologia</p>
-					</div>
-				</div>
-							<div class="col-lg-4 col-sm-6 d-flex mb-5" data-aos="fade-up" data-aos-offset="300" data-aos-duration="2000">
-					<div class="col-md-4">
-						<img src="https://colegioecursoconexao.com.br/media/cache/square_small/uploads/staff/1738271416-c.jpeg" class="effect-circle w-100 rounded-circle" alt="" loading="lazy"/>
-					</div>
-					<div class="col-md-8 my-auto">
-						<h5 class="mb-1 c_orange">Igor Guzzi</h5>
-						<p class="m-0">Física</p>
-					</div>
-				</div>
-					</div>
-		<div id="prof-more" class="row collapse">
-							<div class="col-md-4 col-sm-6 d-flex mb-5">
-					<div class="col-md-4">
-						<img src="https://colegioecursoconexao.com.br/media/cache/square_small/uploads/staff/1725995863-c.jpeg" class="effect-circle w-100 rounded-circle" alt="" loading="lazy"/>
-					</div>
-					<div class="col-md-8 my-auto">
-						<h5 class="mb-1 c_orange">Mateus Ibanhi Pires</h5>
-						<p class="m-0">História</p>
-					</div>
-				</div>
-							<div class="col-md-4 col-sm-6 d-flex mb-5">
-					<div class="col-md-4">
-						<img src="https://colegioecursoconexao.com.br/media/cache/square_small/uploads/staff/1725995903-c.jpeg" class="effect-circle w-100 rounded-circle" alt="" loading="lazy"/>
-					</div>
-					<div class="col-md-8 my-auto">
-						<h5 class="mb-1 c_orange">Sandro Manoel</h5>
-						<p class="m-0">Literatura</p>
-					</div>
-				</div>
-							<div class="col-md-4 col-sm-6 d-flex mb-5">
-					<div class="col-md-4">
-						<img src="https://colegioecursoconexao.com.br/media/cache/square_small/uploads/staff/1725995917-c.jpeg" class="effect-circle w-100 rounded-circle" alt="" loading="lazy"/>
-					</div>
-					<div class="col-md-8 my-auto">
-						<h5 class="mb-1 c_orange">Luana Moretti</h5>
-						<p class="m-0">Matemática</p>
-					</div>
-				</div>
-							<div class="col-md-4 col-sm-6 d-flex mb-5">
-					<div class="col-md-4">
-						<img src="https://colegioecursoconexao.com.br/media/cache/square_small/uploads/staff/1725995930-c.jpeg" class="effect-circle w-100 rounded-circle" alt="" loading="lazy"/>
-					</div>
-					<div class="col-md-8 my-auto">
-						<h5 class="mb-1 c_orange">Carlos Teixeira (Cacá)</h5>
-						<p class="m-0">Matemática</p>
-					</div>
-				</div>
-							<div class="col-md-4 col-sm-6 d-flex mb-5">
-					<div class="col-md-4">
-						<img src="https://colegioecursoconexao.com.br/media/cache/square_small/uploads/staff/1725995944-c.jpeg" class="effect-circle w-100 rounded-circle" alt="" loading="lazy"/>
-					</div>
-					<div class="col-md-8 my-auto">
-						<h5 class="mb-1 c_orange">Bruna Fernanda de Simone</h5>
-						<p class="m-0">Redação</p>
-					</div>
-				</div>
-							<div class="col-md-4 col-sm-6 d-flex mb-5">
-					<div class="col-md-4">
-						<img src="https://colegioecursoconexao.com.br/media/cache/square_small/uploads/staff/1725995958-c.jpeg" class="effect-circle w-100 rounded-circle" alt="" loading="lazy"/>
-					</div>
-					<div class="col-md-8 my-auto">
-						<h5 class="mb-1 c_orange">Marcel Loyo Moitas</h5>
-						<p class="m-0">Biologia</p>
-					</div>
-				</div>
-							<div class="col-md-4 col-sm-6 d-flex mb-5">
-					<div class="col-md-4">
-						<img src="https://colegioecursoconexao.com.br/media/cache/square_small/uploads/staff/1725995971-c.jpeg" class="effect-circle w-100 rounded-circle" alt="" loading="lazy"/>
-					</div>
-					<div class="col-md-8 my-auto">
-						<h5 class="mb-1 c_orange">Gustavo Fiacadori</h5>
-						<p class="m-0">Literatura</p>
-					</div>
-				</div>
-							<div class="col-md-4 col-sm-6 d-flex mb-5">
-					<div class="col-md-4">
-						<img src="https://colegioecursoconexao.com.br/media/cache/square_small/uploads/staff/1725995982-c.jpeg" class="effect-circle w-100 rounded-circle" alt="" loading="lazy"/>
-					</div>
-					<div class="col-md-8 my-auto">
-						<h5 class="mb-1 c_orange">Yuri Suzumura</h5>
-						<p class="m-0">Física</p>
-					</div>
-				</div>
-							<div class="col-md-4 col-sm-6 d-flex mb-5">
-					<div class="col-md-4">
-						<img src="https://colegioecursoconexao.com.br/media/cache/square_small/uploads/staff/1725995994-c.jpeg" class="effect-circle w-100 rounded-circle" alt="" loading="lazy"/>
-					</div>
-					<div class="col-md-8 my-auto">
-						<h5 class="mb-1 c_orange">Leonardo Basso</h5>
-						<p class="m-0">Biologia</p>
-					</div>
-				</div>
-							<div class="col-md-4 col-sm-6 d-flex mb-5">
-					<div class="col-md-4">
-						<img src="https://colegioecursoconexao.com.br/media/cache/square_small/uploads/staff/1738271464-c.jpeg" class="effect-circle w-100 rounded-circle" alt="" loading="lazy"/>
-					</div>
-					<div class="col-md-8 my-auto">
-						<h5 class="mb-1 c_orange">Luís Felipe de Assis Pinheiro</h5>
-						<p class="m-0">Inglês</p>
-					</div>
-				</div>
-							<div class="col-md-4 col-sm-6 d-flex mb-5">
-					<div class="col-md-4">
-						<img src="https://colegioecursoconexao.com.br/media/cache/square_small/uploads/staff/1725996009-c.jpeg" class="effect-circle w-100 rounded-circle" alt="" loading="lazy"/>
-					</div>
-					<div class="col-md-8 my-auto">
-						<h5 class="mb-1 c_orange">Alex Rodrigues Rocha</h5>
-						<p class="m-0">Química</p>
-					</div>
-				</div>
-							<div class="col-md-4 col-sm-6 d-flex mb-5">
-					<div class="col-md-4">
-						<img src="https://colegioecursoconexao.com.br/media/cache/square_small/uploads/staff/1725996036-c.jpeg" class="effect-circle w-100 rounded-circle" alt="" loading="lazy"/>
-					</div>
-					<div class="col-md-8 my-auto">
-						<h5 class="mb-1 c_orange">Jeferson Grillo</h5>
-						<p class="m-0">História</p>
-					</div>
-				</div>
-							<div class="col-md-4 col-sm-6 d-flex mb-5">
-					<div class="col-md-4">
+
+<!-- 
+
+		<div id="prof-more" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto collapse mt-6">
+
+
+							<div class="group relative">
+								<div class="absolute inset-0 bg-secondary/20 rounded-2xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
+								<div class="relative h-full bg-white/[0.03] hover:bg-white/[0.06] border border-white/10 hover:border-secondary/40 backdrop-blur-md p-4 rounded-2xl transition-all duration-500 flex items-center gap-5">
+									<div class="w-16 h-16 shrink-0">
+										<img src="https://colegioecursoconexao.com.br/media/cache/square_small/uploads/staff/1725995863-c.jpeg" class="w-full h-full object-cover rounded-xl border border-white/20 shadow-lg group-hover:scale-105 transition-transform duration-500" alt="" loading="lazy"/>
+									</div>
+									<div>
+										<h5 class="mb-1 text-white font-bold text-lg leading-tight group-hover:text-secondary transition-colors">Mateus Ibanhi Pires</h5>
+										<p class="m-0 text-white/50 text-sm uppercase tracking-wider font-semibold">História</p>
+									</div>
+								</div>
+							</div>
+							<div class="group relative">
+								<div class="absolute inset-0 bg-secondary/20 rounded-2xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
+								<div class="relative h-full bg-white/[0.03] hover:bg-white/[0.06] border border-white/10 hover:border-secondary/40 backdrop-blur-md p-4 rounded-2xl transition-all duration-500 flex items-center gap-5">
+									<div class="w-16 h-16 shrink-0">
+										<img src="https://colegioecursoconexao.com.br/media/cache/square_small/uploads/staff/1725995903-c.jpeg" class="w-full h-full object-cover rounded-xl border border-white/20 shadow-lg group-hover:scale-105 transition-transform duration-500" alt="" loading="lazy"/>
+									</div>
+									<div>
+										<h5 class="mb-1 text-white font-bold text-lg leading-tight group-hover:text-secondary transition-colors">Sandro Manoel</h5>
+										<p class="m-0 text-white/50 text-sm uppercase tracking-wider font-semibold">Literatura</p>
+									</div>
+								</div>
+							</div>
+							<div class="group relative">
+								<div class="absolute inset-0 bg-secondary/20 rounded-2xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
+								<div class="relative h-full bg-white/[0.03] hover:bg-white/[0.06] border border-white/10 hover:border-secondary/40 backdrop-blur-md p-4 rounded-2xl transition-all duration-500 flex items-center gap-5">
+									<div class="w-16 h-16 shrink-0">
+										<img src="https://colegioecursoconexao.com.br/media/cache/square_small/uploads/staff/1725995917-c.jpeg" class="w-full h-full object-cover rounded-xl border border-white/20 shadow-lg group-hover:scale-105 transition-transform duration-500" alt="" loading="lazy"/>
+									</div>
+									<div>
+										<h5 class="mb-1 text-white font-bold text-lg leading-tight group-hover:text-secondary transition-colors">Luana Moretti</h5>
+										<p class="m-0 text-white/50 text-sm uppercase tracking-wider font-semibold">Matemática</p>
+									</div>
+								</div>
+							</div>
+							<div class="group relative">
+								<div class="absolute inset-0 bg-secondary/20 rounded-2xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
+								<div class="relative h-full bg-white/[0.03] hover:bg-white/[0.06] border border-white/10 hover:border-secondary/40 backdrop-blur-md p-4 rounded-2xl transition-all duration-500 flex items-center gap-5">
+									<div class="w-16 h-16 shrink-0">
+										<img src="https://colegioecursoconexao.com.br/media/cache/square_small/uploads/staff/1725995930-c.jpeg" class="w-full h-full object-cover rounded-xl border border-white/20 shadow-lg group-hover:scale-105 transition-transform duration-500" alt="" loading="lazy"/>
+									</div>
+									<div>
+										<h5 class="mb-1 text-white font-bold text-lg leading-tight group-hover:text-secondary transition-colors">Carlos Teixeira (Cacá)</h5>
+										<p class="m-0 text-white/50 text-sm uppercase tracking-wider font-semibold">Matemática</p>
+									</div>
+								</div>
+							</div>
+							<div class="group relative">
+								<div class="absolute inset-0 bg-secondary/20 rounded-2xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
+								<div class="relative h-full bg-white/[0.03] hover:bg-white/[0.06] border border-white/10 hover:border-secondary/40 backdrop-blur-md p-4 rounded-2xl transition-all duration-500 flex items-center gap-5">
+									<div class="w-16 h-16 shrink-0">
+										<img src="https://colegioecursoconexao.com.br/media/cache/square_small/uploads/staff/1725995944-c.jpeg" class="w-full h-full object-cover rounded-xl border border-white/20 shadow-lg group-hover:scale-105 transition-transform duration-500" alt="" loading="lazy"/>
+									</div>
+									<div>
+										<h5 class="mb-1 text-white font-bold text-lg leading-tight group-hover:text-secondary transition-colors">Bruna Fernanda de Simone</h5>
+										<p class="m-0 text-white/50 text-sm uppercase tracking-wider font-semibold">Redação</p>
+									</div>
+								</div>
+							</div>
+							<div class="group relative">
+								<div class="absolute inset-0 bg-secondary/20 rounded-2xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
+								<div class="relative h-full bg-white/[0.03] hover:bg-white/[0.06] border border-white/10 hover:border-secondary/40 backdrop-blur-md p-4 rounded-2xl transition-all duration-500 flex items-center gap-5">
+									<div class="w-16 h-16 shrink-0">
+										<img src="https://colegioecursoconexao.com.br/media/cache/square_small/uploads/staff/1725995958-c.jpeg" class="w-full h-full object-cover rounded-xl border border-white/20 shadow-lg group-hover:scale-105 transition-transform duration-500" alt="" loading="lazy"/>
+									</div>
+									<div>
+										<h5 class="mb-1 text-white font-bold text-lg leading-tight group-hover:text-secondary transition-colors">Marcel Loyo Moitas</h5>
+										<p class="m-0 text-white/50 text-sm uppercase tracking-wider font-semibold">Biologia</p>
+									</div>
+								</div>
+							</div>
+							<div class="group relative">
+								<div class="absolute inset-0 bg-secondary/20 rounded-2xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
+								<div class="relative h-full bg-white/[0.03] hover:bg-white/[0.06] border border-white/10 hover:border-secondary/40 backdrop-blur-md p-4 rounded-2xl transition-all duration-500 flex items-center gap-5">
+									<div class="w-16 h-16 shrink-0">
+										<img src="https://colegioecursoconexao.com.br/media/cache/square_small/uploads/staff/1725995971-c.jpeg" class="w-full h-full object-cover rounded-xl border border-white/20 shadow-lg group-hover:scale-105 transition-transform duration-500" alt="" loading="lazy"/>
+									</div>
+									<div>
+										<h5 class="mb-1 text-white font-bold text-lg leading-tight group-hover:text-secondary transition-colors">Gustavo Fiacadori</h5>
+										<p class="m-0 text-white/50 text-sm uppercase tracking-wider font-semibold">Literatura</p>
+									</div>
+								</div>
+							</div>
+							<div class="group relative">
+								<div class="absolute inset-0 bg-secondary/20 rounded-2xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
+								<div class="relative h-full bg-white/[0.03] hover:bg-white/[0.06] border border-white/10 hover:border-secondary/40 backdrop-blur-md p-4 rounded-2xl transition-all duration-500 flex items-center gap-5">
+									<div class="w-16 h-16 shrink-0">
+										<img src="https://colegioecursoconexao.com.br/media/cache/square_small/uploads/staff/1725995982-c.jpeg" class="w-full h-full object-cover rounded-xl border border-white/20 shadow-lg group-hover:scale-105 transition-transform duration-500" alt="" loading="lazy"/>
+									</div>
+									<div>
+										<h5 class="mb-1 text-white font-bold text-lg leading-tight group-hover:text-secondary transition-colors">Yuri Suzumura</h5>
+										<p class="m-0 text-white/50 text-sm uppercase tracking-wider font-semibold">Física</p>
+									</div>
+								</div>
+							</div>
+							<div class="group relative">
+								<div class="absolute inset-0 bg-secondary/20 rounded-2xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
+								<div class="relative h-full bg-white/[0.03] hover:bg-white/[0.06] border border-white/10 hover:border-secondary/40 backdrop-blur-md p-4 rounded-2xl transition-all duration-500 flex items-center gap-5">
+									<div class="w-16 h-16 shrink-0">
+										<img src="https://colegioecursoconexao.com.br/media/cache/square_small/uploads/staff/1725995994-c.jpeg" class="w-full h-full object-cover rounded-xl border border-white/20 shadow-lg group-hover:scale-105 transition-transform duration-500" alt="" loading="lazy"/>
+									</div>
+									<div>
+										<h5 class="mb-1 text-white font-bold text-lg leading-tight group-hover:text-secondary transition-colors">Leonardo Basso</h5>
+										<p class="m-0 text-white/50 text-sm uppercase tracking-wider font-semibold">Biologia</p>
+									</div>
+								</div>
+							</div>
+							<div class="group relative">
+								<div class="absolute inset-0 bg-secondary/20 rounded-2xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
+								<div class="relative h-full bg-white/[0.03] hover:bg-white/[0.06] border border-white/10 hover:border-secondary/40 backdrop-blur-md p-6 rounded-2xl transition-all duration-500 flex items-center gap-5">
+									<div class="w-20 h-20 shrink-0">
+										<img src="https://colegioecursoconexao.com.br/media/cache/square_small/uploads/staff/1738271464-c.jpeg" class="w-full h-full object-cover rounded-xl border border-white/20 shadow-lg group-hover:scale-105 transition-transform duration-500" alt="" loading="lazy"/>
+									</div>
+									<div>
+										<h5 class="mb-1 text-white font-bold text-lg leading-tight group-hover:text-secondary transition-colors">Luís Felipe de Assis Pinheiro</h5>
+										<p class="m-0 text-white/50 text-sm uppercase tracking-wider font-semibold">Inglês</p>
+									</div>
+								</div>
+							</div>
+							<div class="group relative">
+								<div class="absolute inset-0 bg-secondary/20 rounded-2xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
+								<div class="relative h-full bg-white/[0.03] hover:bg-white/[0.06] border border-white/10 hover:border-secondary/40 backdrop-blur-md p-6 rounded-2xl transition-all duration-500 flex items-center gap-5">
+									<div class="w-20 h-20 shrink-0">
+										<img src="https://colegioecursoconexao.com.br/media/cache/square_small/uploads/staff/1725996009-c.jpeg" class="w-full h-full object-cover rounded-xl border border-white/20 shadow-lg group-hover:scale-105 transition-transform duration-500" alt="" loading="lazy"/>
+									</div>
+									<div>
+										<h5 class="mb-1 text-white font-bold text-lg leading-tight group-hover:text-secondary transition-colors">Alex Rodrigues Rocha</h5>
+										<p class="m-0 text-white/50 text-sm uppercase tracking-wider font-semibold">Química</p>
+									</div>
+								</div>
+							</div>
+							<div class="group relative">
+								<div class="absolute inset-0 bg-secondary/20 rounded-2xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
+								<div class="relative h-full bg-white/[0.03] hover:bg-white/[0.06] border border-white/10 hover:border-secondary/40 backdrop-blur-md p-6 rounded-2xl transition-all duration-500 flex items-center gap-5">
+									<div class="w-20 h-20 shrink-0">
+										<img src="https://colegioecursoconexao.com.br/media/cache/square_small/uploads/staff/1725996036-c.jpeg" class="w-full h-full object-cover rounded-xl border border-white/20 shadow-lg group-hover:scale-105 transition-transform duration-500" alt="" loading="lazy"/>
+									</div>
+									<div>
+										<h5 class="mb-1 text-white font-bold text-lg leading-tight group-hover:text-secondary transition-colors">Jeferson Grillo</h5>
+										<p class="m-0 text-white/50 text-sm uppercase tracking-wider font-semibold">História</p>
+									</div>
+								</div>
+							</div>
+							<div class="group relative">
+								<div class="absolute inset-0 bg-secondary/20 rounded-2xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
+								<div class="relative h-full bg-white/[0.03] hover:bg-white/[0.06] border border-white/10 hover:border-secondary/40 backdrop-blur-md p-6 rounded-2xl transition-all duration-500 flex items-center gap-5">
+									<div class="w-20 h-20 shrink-0">
 						<img src="https://colegioecursoconexao.com.br/media/cache/square_small/uploads/staff/1738271519-c.jpeg" class="effect-circle w-100 rounded-circle" alt="" loading="lazy"/>
 					</div>
 					<div class="col-md-8 my-auto">
@@ -1844,6 +1925,9 @@ include 'header.php';
 				</div>
 					</div>
 
+
+
+           -->
 		<div class="col-md-12 d-flex justify-content-center">
 			<button id="more-prof" data-toggle="collapse" data-target="#prof-more" class="navbar-toggler more-tabs">
 				<i class="fas fa-plus text-white fas-blue"></i>
@@ -1851,16 +1935,15 @@ include 'header.php';
 		</div>
 
 	</div>
+
+
 </section>
 
 
-<section id="depoimentos" class="bg_orange bar-right">
-	<div class="skew-left-3">
-		<div class="set-circles m-none">
-			<img src="https://colegioecursoconexao.com.br/assets/imgs/circle1.svg" alt="" class="c_01">
-			<img src="https://colegioecursoconexao.com.br/assets/imgs/circle2.svg" alt="" class="c_02">
-			<img src="https://colegioecursoconexao.com.br/assets/imgs/circle3.svg" alt="" class="c_03">
-		</div>
+<section id="depoimentos" class="bg_orange bar-right relative overflow-hidden">
+	<!-- Watermark X -->
+	<img src="https://colegioecursoconexao.com.br/assets/images/x-laranja.png" class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] md:w-[800px] pointer-events-none z-0" style="filter: brightness(0) invert(1); opacity: 0.08;" alt="">
+	<div class="skew-left-3 relative z-10">
 		<div class="container mx-auto px-6 py-24">
 			<div class="flex flex-col items-center justify-center mb-16" data-aos="fade-down">
 				<div class="relative flex flex-col items-center z-10 w-full max-w-sm">
@@ -1959,44 +2042,92 @@ include 'header.php';
 	<a href="https://goo.gl/maps/P8uaaNnSix7ufk6LA" target="_blank"><img src="https://colegioecursoconexao.com.br/assets/imgs/mapa-em.png" class="w-100" alt="Mapa conexão"></a>
 </section>
 
-<section id="down-estude">
-	<div class="container">
-		<div class="row mb-5">
-			<div class="col-md-12 my-3">
-				<div class="flex flex-col items-center justify-center mb-10" data-aos="fade-down">
-					<div class="relative flex flex-col items-center z-10 w-full max-w-sm">
-						<div class="bg-secondary text-white px-10 py-3 font-black tracking-widest text-lg uppercase skew-x-[-10deg] shadow-lg z-20">
-							<span class="inline-block skew-x-[10deg]">FAÇA PARTE</span>
-						</div>
-						<div class="bg-primary text-white px-8 py-3 font-black tracking-widest text-sm uppercase skew-x-[8deg] shadow-lg -mt-2 z-10 relative">
-							<span class="inline-block skew-x-[-8deg]">DO CONEXÃO</span>
-						</div>
+<section id="down-estude" class="py-28 bg-primary relative overflow-hidden mt-12">
+	<!-- Decorative Background Glows -->
+	<div class="absolute inset-0 pointer-events-none overflow-hidden z-0">
+		<!-- Watermark X -->
+		<img src="https://colegioecursoconexao.com.br/assets/images/x-laranja.png" class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] md:w-[800px] pointer-events-none" style="filter: brightness(0) invert(1); opacity: 0.08;" alt="">
+
+		<div class="absolute -top-40 -right-40 w-[600px] h-[600px] bg-secondary/10 rounded-full blur-[120px]"></div>
+		<div class="absolute -bottom-40 -left-40 w-[500px] h-[500px] bg-blue-400/10 rounded-full blur-[100px]"></div>
+		<!-- Subtle dot pattern -->
+		<div class="absolute inset-0 opacity-[0.03]" style="background-image: radial-gradient(#fff 1px, transparent 1px); background-size: 32px 32px;"></div>
+	</div>
+
+	<div class="container mx-auto px-6 relative z-10">
+		<!-- New Modern Header -->
+		<div class="flex flex-col items-center justify-center text-center mb-16" data-aos="fade-down">
+			<div class="relative flex flex-col items-center z-10 w-full max-w-sm mb-6">
+				<div class="bg-secondary text-white px-10 py-3 font-black tracking-widest text-lg uppercase skew-x-[-10deg] shadow-lg z-20">
+					<span class="inline-block skew-x-[10deg]">FAÇA PARTE</span>
+				</div>
+				<div class="bg-white text-primary px-8 py-3 font-black tracking-widest text-sm uppercase skew-x-[8deg] shadow-lg -mt-2 z-10 relative">
+					<span class="inline-block skew-x-[-8deg]">DO CONEXÃO</span>
+				</div>
+			</div>
+			<p class="text-white/60 text-lg max-w-2xl font-light leading-relaxed">
+				Dê o próximo passo rumo a uma educação ética, tecnológica e voltada para grandes resultados. Escolha o seu caminho abaixo.
+			</p>
+		</div>
+
+		<!-- Two Modern Cards Action Grid -->
+		<div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+			
+			<!-- Card 1: Inscrições -->
+			<div class="group relative" data-aos="fade-right" data-aos-duration="1000">
+				<!-- ambient hover glow -->
+				<div class="absolute inset-0 bg-secondary/20 rounded-3xl blur-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
+				<div class="relative h-full bg-white/[0.03] hover:bg-white/[0.06] border border-white/10 hover:border-secondary/40 backdrop-blur-md p-10 md:p-12 rounded-3xl transition-all duration-500 overflow-hidden flex flex-col">
+					<!-- Top Icon -->
+					<div class="w-16 h-16 bg-secondary/20 text-secondary rounded-2xl flex items-center justify-center text-2xl mb-8 group-hover:scale-110 group-hover:bg-secondary group-hover:text-white transition-all duration-500">
+						<i class="fas fa-file-signature"></i>
+					</div>
+					<!-- Content -->
+					<div>
+						<span class="text-secondary font-bold text-xs tracking-[0.2em] uppercase block mb-3">Estude conosco</span>
+						<h3 class="text-white font-black text-3xl md:text-4xl mb-4 leading-tight">Inscrições<br>Abertas</h3>
+						<p class="text-white/60 text-base leading-relaxed mb-8">
+							Faça sua inscrição para a prova de bolsas e concorra a descontos de até 50%. Avaliação em ambiente seguro e preparado para receber você rumo à aprovação.
+						</p>
+					</div>
+					<!-- Bottom CTA -->
+					<div class="mt-auto pt-4 flex">
+						<a href="https://colegioecursoconexao.com.br/inscricao_em" class="inline-flex items-center gap-4 bg-secondary text-white px-8 py-4 rounded-full font-bold uppercase tracking-widest text-sm hover:shadow-[0_0_30px_rgba(240,125,0,0.4)] transition-all duration-300">
+							Inscreva-se Agora
+							<i class="fas fa-arrow-right text-[10px] group-hover:translate-x-1 transition-transform"></i>
+						</a>
 					</div>
 				</div>
 			</div>
-		</div>
-		<div class="row mb-5 est_bar">
-			<div class="col-md-6 px-5 mb-5" data-aos="fade-right" data-aos-offset="300" data-aos-duration="2500">
-				<h4 class="est-conec text-uppercase font-weight-bold">
-					Inscrições Ensino Médio
-				</h4>
-				<p>
-					Faça sua inscrição para a prova de bolsas e concorra a descontos de até 50%. Adotaremos todas as medidas necessárias para que os candidatos possam fazer a prova em condições sanitárias seguras, como forma de prevenção ao novo coronavírus: higienização das salas, álcool em gel disponível em todo o espaço escolar, distanciamento mínimo de 1,5 metro, uso de máscaras de segurança obrigatório pela equipe de funcionários e também pelos candidatos presentes.
-				</p>
-					<button class="btn btn-banner btn-orange  mt-md-4"><a href="https://colegioecursoconexao.com.br/inscricao_em" class="text-white text-decoration-none">Inscreva-se</a><i class="fas fa-chevron-right"></i></button>
-				</div>
-				<hr id="bar-middle">
-				<div class="col-md-6 px-5 mb-5" data-aos="fade-left" data-aos-offset="300" data-aos-duration="2500">
-					<h4 class="est-conec text-uppercase font-weight-bold">
-						Quero conhecer a escola
-					</h4>
-					<p>
-						A escolha de uma escola é uma importante decisão, que requer a avaliação de diversos fatores como: proposta pedagógica, professores, equipe pedagógica, infraestrutura, segurança, entre outros aspectos. Uma boa escolha acontece quando há identificação entre os valores da família e da escola. Agende sua visita e venha conhecer nossa proposta e toda infraestrutura que o Colégio Conexão oferece aos alunos.
-					</p>
-					<button class="btn btn-banner btn-blue  mt-md-4"><a href="https://colegioecursoconexao.com.br/faca_uma_visita" class="text-white text-decoration-none">Agende sua visita</a><i class="fas fa-chevron-right"></i></button>
-			</div>
-		</div>
 
+			<!-- Card 2: Agendar Visita -->
+			<div class="group relative" data-aos="fade-left" data-aos-duration="1000">
+				<!-- ambient hover glow -->
+				<div class="absolute inset-0 bg-white/10 rounded-3xl blur-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
+				<div class="relative h-full bg-white/[0.03] hover:bg-white/[0.06] border border-white/10 hover:border-white/30 backdrop-blur-md p-10 md:p-12 rounded-3xl transition-all duration-500 overflow-hidden flex flex-col">
+					<!-- Top Icon -->
+					<div class="w-16 h-16 bg-white/10 text-white rounded-2xl flex items-center justify-center text-2xl mb-8 group-hover:scale-110 group-hover:bg-white group-hover:text-primary transition-all duration-500">
+						<i class="fas fa-school"></i>
+					</div>
+					<!-- Content -->
+					<div>
+						<span class="text-blue-300 font-bold text-xs tracking-[0.2em] uppercase block mb-3">Conheça nossa estrutura</span>
+						<h3 class="text-white font-black text-3xl md:text-4xl mb-4 leading-tight">Quero conhecer<br>a escola</h3>
+						<p class="text-white/60 text-base leading-relaxed mb-8">
+							Uma boa escolha requer identificação com a proposta pedagógica, equipe e ambiente. Agende sua visita e descubra de perto o que faz do Conexão uma escola única.
+						</p>
+					</div>
+					<!-- Bottom CTA -->
+					<div class="mt-auto pt-4 flex">
+						<a href="https://colegioecursoconexao.com.br/faca_uma_visita" class="inline-flex items-center gap-4 bg-white/10 border border-white/20 hover:border-white text-white hover:bg-white hover:text-primary px-8 py-4 rounded-full font-bold uppercase tracking-widest text-sm transition-all duration-300">
+							Agendar Visita
+							<i class="fas fa-arrow-right text-[10px] group-hover:translate-x-1 transition-transform"></i>
+						</a>
+					</div>
+				</div>
+			</div>
+
+		</div>
 	</div>
 </section>
 
@@ -2076,15 +2207,6 @@ include 'header.php';
                       });
                   });
 
-                  var cicle_2 = $('.c_02');
-                  var cicle_3 = $('.c_03');
-
-                    $(window).scroll(function () {
-                        var scroll = $(window).scrollTop(),
-                        maxScroll = $(document).height()-$(window).height();
-                        cicle_3.css({transform: 'rotate(-' + (360 * scroll/maxScroll) + 'deg)'});
-                        cicle_2.css({transform: 'rotate(' + (360 * scroll/maxScroll) + 'deg)'});
-                    });
 
                     /*---- lightbox galeria -----*/
 
